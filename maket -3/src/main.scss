@@ -1,0 +1,105 @@
+@use "base.scss";
+@use "colors.scss" as c;
+
+@mixin btn-blue {
+	background-color: c.$blue-btn;
+	color: c.$text-btn;
+	font-size: 14px;
+	border-radius: 45px;
+	text-align: center;
+	cursor: pointer;
+	width: 189px;
+	height: 40px;
+	border: none;
+	letter-spacing: 1.9px;
+}
+@mixin container {
+	max-width: 1500px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	justify-content: center;
+}
+.site__wrapper {
+	@include container;
+	padding: 0px;
+}
+.banner__img {
+	background-image: url("./images/banner.svg");
+	background-size: cover;
+
+	background-repeat: no-repeat;
+	height: 800px;
+	width: 100%;
+}
+.header {
+	@include container;
+	padding: 39px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 1223px;
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		flex-flow: row-reverse;
+		gap: 10px;
+
+		p {
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		ul {
+			display: flex;
+			gap: 40px;
+			list-style: none;
+		}
+		li {
+			font-size: 14px;
+			line-height: 24px;
+
+			text-decoration: none;
+		}
+		a {
+			color: c.$text-color;
+			text-decoration: none;
+			line-height: 24px;
+
+			letter-spacing: 1.9px;
+			font-size: 14px;
+		}
+	}
+	&__btn {
+		width: 110px;
+		height: 40px;
+		border-radius: 43px;
+		border: 1px solid c.$blue-btn;
+		background-color: transparent;
+		font-size: 17px;
+		letter-spacing: 1px;
+	}
+	&__btn-blue {
+		@include btn-blue;
+	}
+}
+.banner {
+	margin-top: 105px;
+	padding-left: 105px;
+
+	&__content {
+		&__text {
+			h1 {
+				border: 2px solid red;
+			}
+		}
+	}
+}
