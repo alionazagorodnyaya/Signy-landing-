@@ -1,8 +1,14 @@
-$font: "IBM Plex Sans", serif;
+@use "colors.scss" as c;
 
+$font-text: "IBM Plex Sans", sans-serif;
+$font-title: "IBM Plex Serif", serif;
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	font-family: $font;
+	font-family: $font-text;
+	color: c.$text-color;
+}
+h1 {
+	font-family: $font-title;
 }
